@@ -9,11 +9,7 @@ class Solution {
         }
 
         while(!st.isEmpty()) {
-            while(st.peek().contains("\\s")) {
-                st.pop();
-            }
-            String temp = st.pop();
-            result.append(temp);
+            result.append(st.pop());
             if(!st.isEmpty()) {
                 result.append("\\s");
             }
@@ -23,6 +19,23 @@ class Solution {
 
     }
 }
+
+
+/*
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+Example 2:
+
+Input: s = "  hello world  "
+Output: "world hello"
+Explanation: Your reversed string should not contain leading or trailing spaces.
+Example 3:
+
+Input: s = "a good   example"
+Output: "example good a"
+Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
+ */
+
 
 /*
     first we get an array of strings by timming the whitespace at the ends,
